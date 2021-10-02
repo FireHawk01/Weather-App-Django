@@ -59,3 +59,9 @@ def index(request):
 def delete_city(request, city_name):
     City.objects.get(name = city_name).delete()
     return redirect('home')
+
+#shivam's change
+from django.shortcuts import render
+
+def index(request):
+    return render(request, 'weather/index.html') #returns the index.html template
